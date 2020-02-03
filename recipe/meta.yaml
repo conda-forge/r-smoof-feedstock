@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.6.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smoof_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smoof/smoof_{{ version }}.tar.gz
-  sha256: b5704985deca187e59ad31996827d24297338803b4d6de99c97dff7703907c76
+  sha256: e9ec5be8cc6a46c04d969c442f2372d2c2deb72543c70366237a2baef6e8af42
 
 build:
   merge_build_host: True  # [win]
