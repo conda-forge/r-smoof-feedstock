@@ -1,4 +1,4 @@
-{% set version = "1.6.0.2" %}
+{% set version = "1.6.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smoof_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smoof/smoof_{{ version }}.tar.gz
-  sha256: d82dba9702eade00afb84c2c12167de6cec790be7d23ac227f8fe705bdcefc93
+  sha256: af8664b152876c545f6545528de6e05a289d0714103fac7afc52960a9a855fb1
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -66,13 +66,10 @@ test:
 about:
   home: https://github.com/jakobbossek/smoof
   license: BSD_2_clause
-  summary: Provides generators for a high number of both single- and multi- objective test functions
-    which are frequently used for the benchmarking of (numerical) optimization algorithms.
-    Moreover, it offers a set of convenient functions to generate, plot and work with
-    objective functions.
+  summary: Provides generators for a high number of both single- and multi- objective test functions which are frequently used for the benchmarking of (numerical) optimization algorithms. Moreover, it offers a set of convenient functions to generate, plot and work with objective functions.
   license_family: BSD
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
     - LICENSE
 
 extra:
