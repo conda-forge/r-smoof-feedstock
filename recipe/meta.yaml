@@ -1,4 +1,4 @@
-{% set version = "1.6.0.3" %}
+{% set version = "1.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smoof_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smoof/smoof_{{ version }}.tar.gz
-  sha256: af8664b152876c545f6545528de6e05a289d0714103fac7afc52960a9a855fb1
+  sha256: c5a26f69ed23b16aa3ee98f045deb0de0b97a0bd1d2aac101c31e684afcb2801
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
